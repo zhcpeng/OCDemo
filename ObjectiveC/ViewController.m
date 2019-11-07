@@ -8,7 +8,13 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+#define CurrentSystemVersion ([[UIDevice currentDevice].systemVersion doubleValue])
+
+#define isIOS11Hegher ([[UIDevice currentDevice].systemVersion doubleValue] >= 11.0 ? 1 : 0)
+
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>{
+    
+}
 
 @property (nonatomic, strong) UITableView *tableView;           /// <#Desprition#>
 @property (nonatomic, strong) NSMutableArray<NSString *> *dataSources;           /// <#Desprition#>
@@ -23,6 +29,12 @@
     _dataSources = [NSMutableArray array];
     [_dataSources addObject:@"ScrollHeaderViewController"];
     [_dataSources addObject:@"MenuViewController"];
+    [_dataSources addObject:@"SearchContentViewController"];
+    [_dataSources addObject:@"TableViewSelectedCellController"];
+    [_dataSources addObject:@"TextLabelViewController"];
+    [_dataSources addObject:@"MasonryViewController"];
+    [_dataSources addObject:@"DataFormatterViewController"];
+//    [_dataSources addObject:@""];
     
     _tableView = [[UITableView alloc] init];
     _tableView.delegate = self;

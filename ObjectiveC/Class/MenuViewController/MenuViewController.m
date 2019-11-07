@@ -43,8 +43,16 @@
     return true;
 }
 - (BOOL)resignFirstResponder {
-    _showMenuIndexPath = nil;
+    self.showMenuIndexPath = nil;
     return true;
+}
+
+- (void)setShowMenuIndexPath:(NSIndexPath *)showMenuIndexPath {
+    if (showMenuIndexPath == nil && _showMenuIndexPath) {
+        UITableViewCell *cell = [_tableView cellForRowAtIndexPath:_showMenuIndexPath];
+        [cell setSelected:false animated:true];
+    }
+    _showMenuIndexPath = showMenuIndexPath;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,6 +67,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
     cell.textLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row];
+    
     return cell;
 }
 
@@ -70,6 +79,7 @@
     CGPoint point = [gest locationInView:_tableView];
     NSIndexPath *indexPath = [_tableView indexPathForRowAtPoint:point];
     UITableViewCell *cell = [_tableView cellForRowAtIndexPath:indexPath];
+    cell.selected = true;
     [self becomeFirstResponder];
     UIMenuItem *deleteItem = [[UIMenuItem alloc] initWithTitle:@"删除" action:@selector(deleteActiion)];
     UIMenuItem *topItem = [[UIMenuItem alloc] initWithTitle:@"置顶" action:@selector(topAction)];
@@ -84,12 +94,12 @@
 
 - (void)deleteActiion {
     NSLog(@"删除：%ld", _showMenuIndexPath.row);
-    _showMenuIndexPath = nil;
+    self.showMenuIndexPath = nil;
 }
 
 - (void)topAction {
     NSLog(@"置顶：%ld", _showMenuIndexPath.row);
-    _showMenuIndexPath = nil;
+    self.showMenuIndexPath = nil;
 }
 
 @end
