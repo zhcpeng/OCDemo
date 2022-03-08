@@ -41,6 +41,25 @@
     [self.view addSubview:_tableView];
     _tableView.frame = self.view.bounds;
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        UIViewController *vc = NSClassFromString(@"TransitionViewController").new;
+        
+        UIViewController *temp = [[UIViewController alloc] init];
+        temp.view.backgroundColor = [UIColor greenColor];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:temp];
+        nav.modalPresentationStyle = 0;
+
+        [self presentViewController:nav animated:true completion:nil];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            UIViewController *vc = NSClassFromString(@"TransitionViewController").new;
+            vc.modalPresentationStyle = 0;
+            [temp presentViewController:vc animated:true completion:nil];
+        });
+        
+    });
 }
 
 - (void)didReceiveMemoryWarning {

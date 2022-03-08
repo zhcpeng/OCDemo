@@ -34,7 +34,17 @@
     [_dataSources addObject:@"TextLabelViewController"];
     [_dataSources addObject:@"MasonryViewController"];
     [_dataSources addObject:@"DataFormatterViewController"];
-//    [_dataSources addObject:@""];
+    [_dataSources addObject:@"UIStackViewController"];
+    [_dataSources addObject:@"UICollectionViewCenterItemViewController"];
+    [_dataSources addObject:@"TempViewController"];
+    [_dataSources addObject:@"SKTouchFaceIDViewController"];
+    [_dataSources addObject:@"DrawViewController"];
+    [_dataSources addObject:@"ExchangeIMPViewController"];
+    [_dataSources addObject:@"AVCaptureScanViewController"];
+    [_dataSources addObject:@"CarrierViewController"];
+    [_dataSources addObject:@"JDInfoViewController"];
+    [_dataSources addObject:@"CustomAlertViewController"];
+    [_dataSources addObject:@"XcodeViewController"];
     
     _tableView = [[UITableView alloc] init];
     _tableView.delegate = self;
@@ -45,6 +55,7 @@
     [self.view addSubview:_tableView];
     _tableView.frame = self.view.bounds;
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
 }
 
 

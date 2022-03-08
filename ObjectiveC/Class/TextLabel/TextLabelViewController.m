@@ -58,6 +58,17 @@
     
     _label.attributedText = temp;
     
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 350, 200, 50)];
+    label.backgroundColor = [UIColor grayColor];
+    label.textColor = [UIColor redColor];
+    [self.view addSubview:label];
+    
+    NSMutableAttributedString *text1 = [[NSMutableAttributedString alloc] initWithString:@"55.55%"];
+    [text1 setAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:22]} range:NSMakeRange(0, 5)];
+    [text1 setAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14]} range:NSMakeRange(5, 1)];
+    label.attributedText = text1;
+    
 }
 
 

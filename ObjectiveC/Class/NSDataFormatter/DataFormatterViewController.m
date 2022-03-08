@@ -8,6 +8,8 @@
 
 #import "DataFormatterViewController.h"
 
+#import "NSDate+SAMAdditions.h"
+
 @interface DataFormatterViewController ()
 
 @end
@@ -18,19 +20,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self test1];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self test1];
+//    });
+//
+//
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self test2];
+//    });
+//
+//
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self test3];
+//    });
     
+    NSString *s = [[NSDate date] sam_ISO8601String];
+    NSLog(@"%@", s);
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self test2];
-    });
+    NSDate *date = [NSDate sam_dateFromISO8601String:s];
     
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self test3];
-    });
+    NSString *ss = [date sam_timeInWords];
     
 }
 

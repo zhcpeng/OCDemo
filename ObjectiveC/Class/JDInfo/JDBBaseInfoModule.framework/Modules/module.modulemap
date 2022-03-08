@@ -1,0 +1,6 @@
+framework module JDBBaseInfoModule {
+  umbrella header "JDBBaseInfoModule-umbrella.h"
+
+  export *
+  module * { export * }
+}
