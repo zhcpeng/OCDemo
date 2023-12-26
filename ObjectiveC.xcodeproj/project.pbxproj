@@ -59,6 +59,9 @@
 		56F4F4B62696F32F00DC1327 /* ImageShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F4F4B52696F32F00DC1327 /* ImageShowViewController.m */; };
 		56F6B70022AF569B004CD3E8 /* ObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F6B6FF22AF569B004CD3E8 /* ObjectiveCTests.m */; };
 		56FBB02022C3631400B62637 /* MethodSwizzlingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FBB01F22C3631400B62637 /* MethodSwizzlingViewController.m */; };
+		8A77CC6C2AF1031B00A5902F /* AlignmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A77CC6B2AF1031B00A5902F /* AlignmentViewController.m */; };
+		8A77CC6F2AF12D2400A5902F /* YYTTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A77CC6D2AF12D2400A5902F /* YYTTTAttributedLabel.m */; };
+		8AC992E52AC2B4F500F029ED /* DistanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC992E42AC2B4F500F029ED /* DistanceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +190,12 @@
 		56F6B70122AF569B004CD3E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56FBB01E22C3631400B62637 /* MethodSwizzlingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodSwizzlingViewController.h; sourceTree = "<group>"; };
 		56FBB01F22C3631400B62637 /* MethodSwizzlingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzlingViewController.m; sourceTree = "<group>"; };
+		8A77CC6A2AF1031B00A5902F /* AlignmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlignmentViewController.h; sourceTree = "<group>"; };
+		8A77CC6B2AF1031B00A5902F /* AlignmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlignmentViewController.m; sourceTree = "<group>"; };
+		8A77CC6D2AF12D2400A5902F /* YYTTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTTTAttributedLabel.m; sourceTree = "<group>"; };
+		8A77CC6E2AF12D2400A5902F /* YYTTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTTTAttributedLabel.h; sourceTree = "<group>"; };
+		8AC992E32AC2B4F500F029ED /* DistanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DistanceViewController.h; sourceTree = "<group>"; };
+		8AC992E42AC2B4F500F029ED /* DistanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DistanceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +378,8 @@
 		566D3D55214F996A00826545 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				8A77CC692AF1030800A5902F /* Alignment */,
+				8AC992E22AC2B4E400F029ED /* DistanceViewController */,
 				5666466527BF9A6900EF9FF0 /* Xcode */,
 				56B83BF4278C6C3700482C94 /* Transition */,
 				5667C3B7277EE13000C182C0 /* AlertContrller */,
@@ -561,6 +572,26 @@
 			path = MethodSwizzling;
 			sourceTree = "<group>";
 		};
+		8A77CC692AF1030800A5902F /* Alignment */ = {
+			isa = PBXGroup;
+			children = (
+				8A77CC6E2AF12D2400A5902F /* YYTTTAttributedLabel.h */,
+				8A77CC6D2AF12D2400A5902F /* YYTTTAttributedLabel.m */,
+				8A77CC6A2AF1031B00A5902F /* AlignmentViewController.h */,
+				8A77CC6B2AF1031B00A5902F /* AlignmentViewController.m */,
+			);
+			path = Alignment;
+			sourceTree = "<group>";
+		};
+		8AC992E22AC2B4E400F029ED /* DistanceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8AC992E32AC2B4F500F029ED /* DistanceViewController.h */,
+				8AC992E42AC2B4F500F029ED /* DistanceViewController.m */,
+			);
+			path = DistanceViewController;
+			sourceTree = "<group>";
+		};
 		F9583D2652B7D173812F9BF5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -715,6 +746,7 @@
 				5631DEF6214216EB00692213 /* main.m in Sources */,
 				566E1A7D24A1D5A100256B86 /* TTTAttributedLabel.m in Sources */,
 				56B23D392188594000048159 /* SearchContentViewController.m in Sources */,
+				8AC992E52AC2B4F500F029ED /* DistanceViewController.m in Sources */,
 				5678C30221B681FE004F02BA /* NSAttributedString+JKAdditions.m in Sources */,
 				5694B54B250F4E4500432BEE /* SAMKeychainQuery.m in Sources */,
 				56E5009723B0BDB1003CCC22 /* SKFancyChartManager.m in Sources */,
@@ -736,7 +768,9 @@
 				56B83BF7278C6C3700482C94 /* JDTTransition.m in Sources */,
 				5666466827BF9A7400EF9FF0 /* XcodeViewController.m in Sources */,
 				56B83BFA278C6C4E00482C94 /* TransitionViewController.m in Sources */,
+				8A77CC6F2AF12D2400A5902F /* YYTTTAttributedLabel.m in Sources */,
 				56FBB02022C3631400B62637 /* MethodSwizzlingViewController.m in Sources */,
+				8A77CC6C2AF1031B00A5902F /* AlignmentViewController.m in Sources */,
 				56692CCC27735C2300BA160B /* BundleIdViewController.m in Sources */,
 				56D839352505CA0100499C8B /* SKTouchFaceIDManager.m in Sources */,
 				569228B92374170400FC3231 /* UIStackViewController.m in Sources */,

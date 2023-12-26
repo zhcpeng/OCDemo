@@ -45,6 +45,8 @@
     [_dataSources addObject:@"JDInfoViewController"];
     [_dataSources addObject:@"CustomAlertViewController"];
     [_dataSources addObject:@"XcodeViewController"];
+    [_dataSources addObject:@"DistanceViewController"];
+    [_dataSources addObject:@"AlignmentViewController"];
     
     _tableView = [[UITableView alloc] init];
     _tableView.delegate = self;
@@ -55,6 +57,9 @@
     [self.view addSubview:_tableView];
     _tableView.frame = self.view.bounds;
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    
+    NSLog(@"1111 %.2f", UIScreen.mainScreen.scale);
     
 }
 

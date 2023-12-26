@@ -24,7 +24,7 @@
     [_window makeKeyAndVisible];
     _window.backgroundColor = [UIColor whiteColor];
     
-    printf("%s", @"111😀🙂😑😎👩‍👩‍👧‍👧👨‍👨‍👧👩‍👦22".UTF8String);
+//    printf("%s", @"111😀🙂😑😎👩‍👩‍👧‍👧👨‍👨‍👧👩‍👦22".UTF8String);
     
     return YES;
 }
